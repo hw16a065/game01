@@ -15,31 +15,22 @@ Vector2 cannonPos;      //!< 砲台の位置
 Vector2 bulletPos;      //!< 弾の位置
 Rect    targetRect;     //!< ターゲットの矩形
 int     score;          //!< スコア
-<<<<<<< HEAD
-=======
+
 int     changePos;
->>>>>>> c4a0288121516869992900ecc03663916f91e584
+
 
 // ゲーム開始時に呼ばれる関数です。
 void Start()
 {
-<<<<<<< HEAD
+
         cloudPos = Vector2(-320, 100);
-        cannonPos = Vector2(-80, -150);
-        targetRect = Rect(80, -140, 40, 40);
+        cannonPos = Vector2(-310, -150);
+        targetRect = Rect(280, -140, 40, 40);
         bulletPos.x = -999;
         score = 0;
         PlayBGM("bgm_maoudamashii_8bit07.mp3");
     }
-=======
-    cloudPos = Vector2(-320, 100);
-    cannonPos = Vector2(-310, -150);  //310  //-70
-    targetRect = Rect(280, -140, 40, 40);//280
-    bulletPos.x = -999;
-    score = 0;
-    PlayBGM("bgm_maoudamashii_8bit07.mp3");
-}
->>>>>>> c4a0288121516869992900ecc03663916f91e584
+
 
 void PlaySE(){
         PlaySound("se_maoudamashii_explosion03.mp3");
@@ -49,7 +40,7 @@ void PlaySE(){
 void Update()
 {
     
-<<<<<<< HEAD
+
         // 弾の発射
         if (bulletPos.x <= -999 && Input::GetKeyDown(KeyMask::Space)) {
                 bulletPos = cannonPos + Vector2(50, 10);
@@ -92,7 +83,7 @@ void Update()
         SetFont("nicoca_v1.ttf", 20.0f);
         DrawText(FormatString("%05d", score), Vector2(-319, 199), Color::black);
         DrawText(FormatString("%05d", score), Vector2(-320, 200), Color::white);
-=======
+
     // 弾の発射
     if (bulletPos.x <= -999 && Input::GetKeyDown(KeyMask::Space)) {
         bulletPos = cannonPos + Vector2(50, 10);
@@ -126,7 +117,7 @@ void Update()
     // 弾の描画
     if (bulletPos.x > -999) {
         DrawImage("bullet.png", bulletPos);
->>>>>>> c4a0288121516869992900ecc03663916f91e584
+
     }
 //
 //  Game.cpp
@@ -136,9 +127,7 @@ void Update()
 //  Copyright © 2017年 Satoshi Numata. All rights reserved.
 //
 
-<<<<<<< HEAD
 #include "Game.hpp"
-=======
     // 砲台の描画
     FillRect(Rect(cannonPos.x-10, -140, 20, 100), Color::blue);
     if(cannonPos.y >= -70){
@@ -158,4 +147,3 @@ void Update()
     DrawText(FormatString("%05d", score), Vector2(-320, 200), Color::white);
 }
 
->>>>>>> c4a0288121516869992900ecc03663916f91e584
