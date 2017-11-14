@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061AA3E11FBAD3EF006CA24A /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 061AA3DF1FBAD3EF006CA24A /* Game.cpp */; };
 		8E344A3C1E633F2800497B74 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E344A3B1E633F2800497B74 /* ApplicationServices.framework */; };
 		8E344A461E6343E200497B74 /* nicoca_v1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E344A451E6343E200497B74 /* nicoca_v1.ttf */; };
 		8E48FE6B1F049A3D00603B0E /* bgm_maoudamashii_8bit07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E48FE6A1F049A3D00603B0E /* bgm_maoudamashii_8bit07.mp3 */; };
@@ -63,13 +64,13 @@
 		8EED81BC1DF1DD4200761408 /* SoundImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EED81B91DF1DD4200761408 /* SoundImpl.mm */; };
 		8EED81BE1DF1E41D00761408 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EED81BD1DF1E41D00761408 /* AVFoundation.framework */; };
 		8EED81C41DF31F1B00761408 /* Simple2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EED81C21DF31F1B00761408 /* Simple2D.cpp */; };
-		8EED81F11DF550B000761408 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EED81EF1DF550B000761408 /* Game.cpp */; };
 		8EF05F6913EEB53F007C1B2E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF05F6813EEB53E007C1B2E /* OpenGL.framework */; };
 		8EF05F6D13EEB563007C1B2E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF05F6B13EEB563007C1B2E /* OpenAL.framework */; };
 		8EF0608A13EEC04F007C1B2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF0608913EEC04F007C1B2E /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061AA3DF1FBAD3EF006CA24A /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		8E344A3B1E633F2800497B74 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		8E344A451E6343E200497B74 /* nicoca_v1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nicoca_v1.ttf; sourceTree = "<group>"; };
 		8E39DB4D142A454000E5A206 /* Settings.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Settings.hpp; path = ../Sources/Settings.hpp; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 		8EED81BD1DF1E41D00761408 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8EED81C21DF31F1B00761408 /* Simple2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simple2D.cpp; sourceTree = "<group>"; };
 		8EED81C31DF31F1B00761408 /* Simple2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Simple2D.hpp; sourceTree = "<group>"; };
-		8EED81EF1DF550B000761408 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		8EED81F81DF59D2700761408 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		8EF05EDF13EEB380007C1B2E /* GameFramework.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; lineEnding = 0; path = GameFramework.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8EF05F6813EEB53E007C1B2E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -235,7 +235,7 @@
 		8EE63A0A1432667100922244 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8EED81EF1DF550B000761408 /* Game.cpp */,
+				061AA3DF1FBAD3EF006CA24A /* Game.cpp */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -499,7 +499,6 @@
 			files = (
 				8EED81411DF1D49E00761408 /* Vector3.cpp in Sources */,
 				8EE63A5A1432690C00922244 /* GMAppDelegate.mm in Sources */,
-				8EED81F11DF550B000761408 /* Game.cpp in Sources */,
 				8EED815C1DF1D5AD00761408 /* Random.cpp in Sources */,
 				8EED81C41DF31F1B00761408 /* Simple2D.cpp in Sources */,
 				8EED81831DF1D81B00761408 /* Camera.cpp in Sources */,
@@ -531,6 +530,7 @@
 				8EED81451DF1D4B200761408 /* Rect.cpp in Sources */,
 				8EED81621DF1D65700761408 /* GameError.cpp in Sources */,
 				8EED814A1DF1D4BA00761408 /* Matrix4x4.cpp in Sources */,
+				061AA3E11FBAD3EF006CA24A /* Game.cpp in Sources */,
 				8EED81AE1DF1DB1400761408 /* Input.mm in Sources */,
 				8EED814E1DF1D4D500761408 /* Color.cpp in Sources */,
 				8EED81BA1DF1DD4200761408 /* Music.mm in Sources */,
