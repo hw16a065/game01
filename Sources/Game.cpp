@@ -22,8 +22,8 @@ int     changePos;
 void Start()
 {
     cloudPos = Vector2(-320, 100);
-    cannonPos = Vector2(-80, -150);  //310  //-70
-    targetRect = Rect(80, -140, 40, 40);//280
+    cannonPos = Vector2(-310, -150);  //310  //-70
+    targetRect = Rect(280, -140, 40, 40);//280
     bulletPos.x = -999;
     score = 0;
     PlayBGM("bgm_maoudamashii_8bit07.mp3");
