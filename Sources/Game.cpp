@@ -74,6 +74,13 @@ void Update()
     
         // 砲台の描画
         FillRect(Rect(cannonPos.x-10, -140, 20, 100), Color::blue);
+        if(cannonPos.y >= -70){
+            changePos = -1;
+        }
+        if(cannonPos.y <= -150){
+            changePos = 1;
+        }
+        cannonPos.y += 1 * changePos;
         DrawImage("cannon.png", cannonPos);
     
         // ターゲットの描画
@@ -119,28 +126,6 @@ void Update()
         DrawImage("bullet.png", bulletPos);
 
     }
-//
-//  Game.cpp
-//  Game
-//
-//  Created by hw16a065 on 2017/11/14.
-//  Copyright © 2017年 Satoshi Numata. All rights reserved.
-//
-
-#include "Game.hpp"
-    // 砲台の描画
-    FillRect(Rect(cannonPos.x-10, -140, 20, 100), Color::blue);
-    if(cannonPos.y >= -70){
-        changePos = -1;
-    }
-    if(cannonPos.y <= -150){
-        changePos = 1;
-    }
-    cannonPos.y += 1 * changePos;
-    DrawImage("cannon.png", cannonPos);
-    // ターゲットの描画
-    FillRect(targetRect, Color::red);
-
     // スコアの描画
     SetFont("nicoca_v1.ttf", 20.0f);
     DrawText(FormatString("%05d", score), Vector2(-319, 199), Color::black);
