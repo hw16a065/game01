@@ -1,13 +1,13 @@
 #include "Game.hpp"
 
-// TODO: 砲台の位置を画面左に、ターゲットの位置を画面右に移動させる。(A)
-// TODO: 雲の位置を左から右に動かす。見えなくなったら左端に戻す。(B)
-// TODO: 砲台を青い壁に沿って上下に動かす。(C)
-// TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)
-// TODO: スコアのサイズを大きくする。(E)
-// TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)
-// TODO: PlayBGM()関数を使って、BGMを再生する。(G)
-// TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)
+// TODO: 砲台の位置を画面左に、ターゲットの位置を画面右に移動させる。(A)　國定
+// TODO: 雲の位置を左から右に動かす。見えなくなったら左端に戻す。(B)　國定
+// TODO: 砲台を青い壁に沿って上下に動かす。(C)　國定
+// TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)　松岡
+// TODO: スコアのサイズを大きくする。(E)　松岡
+// TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)　松岡
+// TODO: PlayBGM()関数を使って、BGMを再生する。(G)　木村
+// TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)　木村
 
 
 Vector2 cloudPos;       //!< 雲の位置
@@ -46,13 +46,14 @@ void Update()
                 bulletPos = cannonPos + Vector2(50, 10);
                 PlaySE();
             }
-    
         // 弾の移動
         if (bulletPos.x > -999) {
-                bulletPos.x += 10 * Time::deltaTime;
-        
+                bulletPos.x += 200 * Time::deltaTime;
                 // ターゲットと弾の当たり判定
                 Rect bulletRect(bulletPos, Vector2(32, 20));
+                if (bulletPos.x > 300){
+                    bulletPos.x = -999; // 弾を発射可能な状態に戻す
+                }
                 if (targetRect.Overlaps(bulletRect)) {
                         score += 100;         // スコアの加算
                         bulletPos.x = -999; // 弾を発射可能な状態に戻す
